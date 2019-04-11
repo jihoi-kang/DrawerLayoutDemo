@@ -75,8 +75,11 @@ class MainActivity : AppCompatActivity() {
                 Log.e("hoi", "onDrawerOpened")
             }
 
-        }
-        )
+        })
+
+//        제스처 이벤트 막기
+        dl_root.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+
 
         btn_open_left.setOnClickListener {
             dl_root.openDrawer(fl_left_side)
